@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mascotas y Personas</title>
+</head>
+<body>
+  <script>
+    /**
+     * Constructor Mascota
+     */
+    function Mascota(nombre) {
+      let _nombre = nombre
+
+      // Propiedades getter y setter
+      Object.defineProperty(this, "_getNombre", {
+        get: function() {
+          return _nombre
+        }
+      })
+
+      Object.defineProperty(this, "_setNombre", {
+        set: function(nombre) {
+          _nombre = nombre
+        }
+      })
+    }
+
+    Mascota.prototype.getNombre = function() {
+      return this._getNombre;
+    }
+    Mascota.prototype.setNombre = function(nombre) {
+      this._setNombre = nombre
+    }
+
+    /**
+     * Constructor Persona
+     */
+     function Persona(nombre, mascota) {
+      let _nombre = nombre
+      this.mascota = mascota
+
+      // Propiedades getter y setter
+      Object.defineProperty(this, "_getNombre", {
+        get: function() {
+          return _nombre
+        }
+      })
+
+      Object.defineProperty(this, "_setNombre", {
+        set: function(nombre) {
+          _nombre = nombre
+        }
+      })
+    }
+
+    Persona.prototype.getNombre = function() {
+      return this._getNombre;
+    }
+    Persona.prototype.setNombre = function(nombre) {
+      this._setNombre = nombre
+    }
+
+    let mascota = new Mascota('Ayudante de Santa')
+    let persona = new Persona('Bort', mascota)
+
+    mascota.getNombre()
+    persona.mascota.getNombre()
+    persona.getNombre()
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encapsulación</title>
+</head>
+<body>
+  <script>
+    /**
+     * Funcion constructora de estudiantes
+     */
+    function Estudiante(nombre) {
+      this.nombre = nombre
+    }
+    let juanito = new Estudiante('Juan')
+    console.log(juanito)
+
+    /**
+     * Constructor de vehículos
+     */
+    function Vehiculo(marca) {
+      // Variable (privada)
+      let _marca = marca
+
+      // Definir "propiedades" los métodos para acceder a la marca
+      Object.defineProperty(this, "_getMarca", {
+        get: function() {
+          return _marca
+        }
+      })
+
+      Object.defineProperty(this, "_setMarca", {
+        set: function (marca) {
+          _marca = marca
+        }
+      })
+    }
+
+    /**
+     * getter y setters "Globales" -> afecta a todas las instancias
+     */
+    Vehiculo.prototype.getMarca = function() {
+      return this._getMarca
+    }
+    Vehiculo.prototype.setMarca = function(marca) {
+      let respuesta = confirm('Estás cambiando la marca')
+
+      if (respuesta){
+        this._setMarca = marca
+      } else {
+        alert("Misión abortada")
+      }
+    }
+  </script>
+</body>
+</html>
