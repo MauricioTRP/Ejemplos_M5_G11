@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cuadrado</title>
+</head>
+<body>
+  <script>
+    /**
+     * Constructor de cuadrados
+     */
+    function Cuadrado(lado) {
+      this.lado = lado
+    }
+
+    /**
+     * Método para calcular área
+     * Método para calcular perímetro
+     */
+    Cuadrado.prototype.calcularArea = function () {
+      return this.lado * this.lado
+    }
+
+    Cuadrado.prototype.calcularPerimetro = function() {
+      return this.lado * 4
+    }
+
+    // Creación de instancia
+    let cuadradoChico = new Cuadrado(2)
+
+    // Usar métodos 
+    cuadradoChico.calcularArea()
+    cuadradoChico.calcularPerimetro()
+  </script>
+</body>
+</html>

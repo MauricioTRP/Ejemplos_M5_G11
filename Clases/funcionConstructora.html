@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcion Constuctora</title>
+</head>
+<body>
+  
+  <script>
+    /**
+     * Función constructora
+     * 
+     * Permite crear objetos de "una misma familia"
+     */
+    function Estudiante (nombre, edad, curso) {
+      this.nombre = nombre
+      this.edad = edad
+      this.curso = curso
+    }
+
+    // Prototype de métodos de clase Estudiante
+    Estudiante.prototype.saludar = function() {
+      return `Hola soy ${this.nombre}`
+    }
+
+    let juanito = new Estudiante('Juanito', 15, '8vo A')
+    let epidemia = new Estudiante('Epidemia', 10, '5to B')
+    let marcelo = new Estudiante('Marcelo', 30, 'Profe jefe del 6to')
+
+    // agregamos la posibilidad de saludar por estudiante
+    // juanito.saludar = function() {
+    //   console.log(`Hola soy ${this.nombre}`)
+    // }
+  </script>
+</body>
+</html>

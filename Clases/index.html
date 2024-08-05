@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clases OOP</title>
+</head>
+<body>
+  
+  <script>
+    let auto = new Object() // Crear objeto "vacío"
+    /**
+     * Nuevas propiedades 
+     * objeto.<propiedad> = valorPropiedad
+     */
+    auto.marca = 'Toyota'
+    auto.modelo = 'Corolla'
+    auto.fecha = 2020
+
+    /**
+     * Figura geométrica "Rectángulo"
+     * props : { alto, ancho}
+     */
+    let rectangulo = new Object() // Objeto cuadrado "vacío"
+    
+    rectangulo.alto = 10
+    rectangulo["ancho"] = 5
+
+    /**
+     * Métodos de objetos
+     * 
+     * acciones que hacen los objetos
+     * let vaca = new Object()
+     * vaca.mugir = 'Muuuuu'
+     */
+
+    let vaca = new Object()
+    vaca.sonido = function () {
+      console.log("Muuuuuuuuu 🐄")
+    }
+
+    /**
+     * Notación literal
+     * ejemplo Perro
+     */
+    let perro = {
+      hablar: () => {
+        console.log("Guau 🐶")
+      }
+    }
+
+    /**
+     * Palabra clave this
+     */
+    let persona = new Object()
+    persona.name = 'Camila'
+    persona.saludar = function() {
+      console.log(`Hola soy ${this.name}`)
+    }
+    
+    // Qué sucede con arrow function?
+    // this apunta la ventana y no al objeto ❌💀
+    persona.saludar2 = () => {
+      console.log(`Hola soy ${this.name}`)
+    }
+
+    // Si no usamos this, no encuentra la variable
+    persona.saludar3 = function() {
+      console.log(`Hola soy ${name}`)
+    }
+
+  </script>
+</body>
+</html>
