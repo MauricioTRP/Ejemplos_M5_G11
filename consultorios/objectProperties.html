@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * Constructor Pacientes
+     * 
+     * nombre, edad, rut, diagnóstico
+     */
+    function Paciente(nombre, edad, rut, diagnostico) {
+      let _nombre = nombre;
+      let _edad = edad;
+      let _rut = rut;
+      let _diagnostico = diagnostico;
+
+      Object.defineProperties(this, {
+        nombre: {
+          get: function () {
+            return _nombre;
+          },
+          set: function (nuevoNombre) {
+            _nombre = nuevoNombre;
+          }
+        },
+        edad: {
+          get: function () {
+            return _edad;
+          },
+          set: function (nuevaEdad) {
+            _edad = nuevaEdad;
+          }
+        },
+        rut: {
+          get: function () {
+            return _rut;
+          },
+          set: function (nuevoRut) {
+            _rut = nuevoRut;
+          }
+        },
+        diagnostico: {
+          get: function () {
+            return _diagnostico;
+          },
+          set: function (nuevoDiagnostico) {
+            _diagnostico = nuevoDiagnostico;
+          }
+        }
+      });
+    }
+
+    Paciente.prototype = {
+      getNombre: function () {
+        return this.nombre;
+      },
+      setNombre: function (nombre) {
+        this.nombre = nombre;
+      },
+      getEdad: function () {
+        return this.edad;
+      },
+      setEdad: function (edad) {
+        this.edad = edad;
+      },
+      getRut: function () {
+        return this.rut;
+      },
+      setRut: function (rut) {
+        this.rut = rut;
+      },
+      getDiagnostico: function () {
+        return this.diagnostico;
+      },
+      setDiagnostico: function (diagnostico) {
+        this.diagnostico = diagnostico;
+      }
+    };
+
+    /**
+     * Constructor de consultorio
+     * Nombre, pacientes []
+     */
+    function Consultorio(nombre) {
+      let _nombre = nombre;
+      let _pacientes = [];
+
+      Object.defineProperties(this, {
+        nombre: {
+          get: function () {
+            return _nombre;
+          },
+          set: function (nuevoNombre) {
+            _nombre = nuevoNombre;
+          }
+        },
+        pacientes: {
+          get: function () {
+            return _pacientes;
+          }
+        }
+      });
+    }
+
+    Consultorio.prototype = {
+  getNombre: function () {
+    return this.nombre;
+  },
+  setNombre: function (nombre) {
+    this.nombre = nombre;
+  },
+  getPacientes: function () {
+    return this.pacientes;
+  },
+  addPaciente: function (paciente) {
+    this.pacientes.push(paciente);
+  },
+  getPacientesNombres: function () {
+    return this.pacientes.map(paciente => paciente.nombre);
+  }
+};
+
+    // Crear pacientes 
+    let paciente1 = new Paciente('Simone Biles', 27, "18.537.987-1", "TDAH");
+    let paciente2 = new Paciente('Rebecca Andrade', 25, "19.345.678-9", "Asma");
+    let paciente3 = new Paciente('Francisca Crovetto', 34, "15.546.896-0", "Fractura radio mano izquierda");
+    let paciente4 = new Paciente('Yasmani Acosta', 35, "21.567.213-6", "Epicondilitis");
+
+    // Crear Consultorio y agregar pacientes
+    let consultorio = new Consultorio('Consultorio Miraflores');
+    consultorio.addPaciente(paciente1);
+    consultorio.addPaciente(paciente2);
+    consultorio.addPaciente(paciente3);
+    consultorio.addPaciente(paciente4);
+
+    // Listar solo los nombres de los pacientes en el consultorio
+    console.log(consultorio.getPacientesNombres()); // ['Simone Biles', 'Rebecca Andrade', 'Francisca Crovetto', 'Yasmani Acosta']
+  </script>
+</body>
+
+</html>
