@@ -6,6 +6,19 @@
  * con propiedad pública this.lado, heredada
  * y un método para calcular su área
  */
+class PresentadorPoligonos {
+  constructor(poligono) {
+    this.poligono = poligono
+  }
+
+  presentarPoligono() {
+    return `
+    Soy un poligono de ${this.poligono.cantidad_lados}
+    Y mi área es ${this.poligono.calcularArea()}
+    `
+  }
+}
+
 class Poligono {
   constructor(cantidad_lados) {
     this.cantidad_lados = cantidad_lados
@@ -39,6 +52,18 @@ class Cuadrado extends PoligonoRegular {
   }
 }
 
+let algoRaro = new Poligono(25)
 let pentagono = new PoligonoRegular(5, 5)
-let cuadradoRegular = new PoligonoRegular(4, 4)
+let triangulo = new PoligonoRegular(3, 4)
 let cuadradoCuadrado = new Cuadrado(4)
+
+const presentador = new PresentadorPoligonos(algoRaro)
+
+console.log(presentador.presentarPoligono())
+
+presentador.poligono = pentagono
+
+console.log(presentador.presentarPoligono())
+
+presentador.poligono = cuadradoCuadrado
+console.log(presentador.presentarPoligono())
