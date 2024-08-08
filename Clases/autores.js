@@ -23,10 +23,11 @@ class Autor {
   }
 }
 
-const libro1 = new Libro('Manual de Carreño', 1501)
-const libro2 = new Libro('Eloquent JS', 2018)
+const libro1 = new Libro('Recopilación poesías', 1501)
+const libro2 = new Libro('Novela', 2018)
 
-const autor = new Autor('Pepito', libro1)
+const autor = new Autor('Alexa', libro1)
+console.log(autor)
 
 console.log("Primera publicación")
 console.log(autor)
