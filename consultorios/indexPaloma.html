@@ -97,7 +97,7 @@
      */
     function Consultorio(nombre, paciente) {
       let _nombre = nombre
-      let _pacientes = [paciente]
+      let _pacientes = []
 
       // Getter y Setter para nombre
       Object.defineProperty(this, "nombre", {
@@ -134,6 +134,30 @@
     Consultorio.prototype.setPacientes = function(paciente) {
       this._setPacientes = paciente
     }
+
+    Consultorio.prototype.mostrarPacientes = function(paciente) {
+      this._setPacientes = paciente
+    }
+    Consultorio.prototype.mostrarNombresPacientes = function() {
+      return this.getPacientes().map(paciente => paciente.getNombre());
+    }
+
+    // Crear una instancia de Paciente
+    let paciente1 = new Paciente('Simone Biles', 27, "18.537.987-1", "TDAH");
+    let paciente2 = new Paciente('Rebecca Andrade', 25, "19.345.678-9", "Asma");
+    let paciente3 = new Paciente('Francisca Crovetto', 34, "15.546.896-0", "Fractura radio mano izquierda");
+    let paciente4 = new Paciente('Yasmani Acosta', 35, "21.567.213-6", "Epicondilitis");
+
+    // Crear una instancia de Consultorio y agregar pacientes
+    let consultorio = new Consultorio('Consultorio Miraflores');
+    consultorio.setPacientes(paciente1);
+    consultorio.setPacientes(paciente2);
+    consultorio.setPacientes(paciente3);
+    consultorio.setPacientes(paciente4);
+
+    // Listar solo los nombres de los pacientes en el consultorio
+    console.log(consultorio.mostrarNombresPacientes());
+    
   </script>
 </body>
 </html>
