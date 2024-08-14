@@ -1,0 +1,122 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Khaled",
+        "last": "Fiske"
+      },
+      "location": {
+        "street": {
+          "number": 9345,
+          "name": "Belgerudveien"
+        },
+        "city": "Skotselv",
+        "state": "Vest-Agder",
+        "country": "Norway",
+        "postcode": "9305",
+        "coordinates": {
+          "latitude": "46.6256",
+          "longitude": "-57.6150"
+        },
+        "timezone": {
+          "offset": "-8:00",
+          "description": "Pacific Time (US & Canada)"
+        }
+      },
+      "email": "khaled.fiske@example.com",
+      "login": {
+        "uuid": "732e0bea-bed9-4e1e-a788-fcbf3f8ebbd2",
+        "username": "orangelion968",
+        "password": "jordan",
+        "salt": "R6ZK3f6y",
+        "md5": "e765d646e03272e63f3fa2070b373a47",
+        "sha1": "d257b5bd3d2bb98b8734217229adacf263c2abe9",
+        "sha256": "ea685962dd9c11484149eb53cf9bafc72914c494b0dd0ad07da5fd681b9570da"
+      },
+      "dob": {
+        "date": "1989-10-08T14:35:25.929Z",
+        "age": 34
+      },
+      "registered": {
+        "date": "2016-05-20T09:38:17.973Z",
+        "age": 8
+      },
+      "phone": "39587781",
+      "cell": "99604144",
+      "id": {
+        "name": "FN",
+        "value": "08108901595"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/99.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/99.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/99.jpg"
+      },
+      "nat": "NO"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Laura",
+        "last": "Rasmussen"
+      },
+      "location": {
+        "street": {
+          "number": 6327,
+          "name": "Munkemaen"
+        },
+        "city": "Viby Sj.",
+        "state": "Nordjylland",
+        "country": "Denmark",
+        "postcode": 38350,
+        "coordinates": {
+          "latitude": "27.1390",
+          "longitude": "175.2324"
+        },
+        "timezone": {
+          "offset": "+1:00",
+          "description": "Brussels, Copenhagen, Madrid, Paris"
+        }
+      },
+      "email": "laura.rasmussen@example.com",
+      "login": {
+        "uuid": "a17167ff-3b8e-4a7a-8fa5-8d0b27e704dd",
+        "username": "crazyswan848",
+        "password": "1017",
+        "salt": "H2dRhD4D",
+        "md5": "407ed5d351c444da5efdfa3627d81f4a",
+        "sha1": "7cc61fa2fd4b64d752e99b680b53107a7985a0c0",
+        "sha256": "3f7039874df7af198ce71e691b38ee413c4852b437430039946b6c9b707c010a"
+      },
+      "dob": {
+        "date": "1948-12-05T18:47:19.208Z",
+        "age": 75
+      },
+      "registered": {
+        "date": "2020-10-17T18:19:33.049Z",
+        "age": 3
+      },
+      "phone": "86100608",
+      "cell": "96184443",
+      "id": {
+        "name": "CPR",
+        "value": "051248-9637"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/17.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/17.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/17.jpg"
+      },
+      "nat": "DK"
+    }
+  ],
+  "info": {
+    "seed": "f40e68af591cdbca",
+    "results": 2,
+    "page": 1,
+    "version": "1.4"
+  }
+}
