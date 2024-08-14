@@ -43,6 +43,8 @@ const serie = new Reproductor("https://www.youtube.com/embed/_1qGhChKL8s?si=lxwF
 const pelicula = new Reproductor("https://www.youtube.com/embed/OVDhmpHiZWU?si=hNKGPi3dftI7emAq", "peliculas")
 const musica = new Reproductor("https://www.youtube.com/embed/9hdVzYi1prc?si=de20kL44RPscHrgJ", "musica")
 
+
+
 musica.playMultimedia()
 pelicula.playMultimedia()
 serie.playMultimedia()
